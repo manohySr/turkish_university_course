@@ -1,4 +1,4 @@
-##The Goal is to create an application which will give you a list of university-department from your course query
+## The Goal is to create an application which will give you a list of university-department from your course query
 
 ```sql
 Example:
@@ -8,8 +8,8 @@ Here is the intuition
   3- we will have a list of university and the department related to that course (of course if there is that course in our list of university-department)
 ```
 
-##Here are the schemas for the database
-#It is just a pseudocode which happens to be python
+## Here are the schemas for the database
+### It is just a pseudocode which happens to be python
 
 ```python
 class UniversityModel(BaseModel):
@@ -39,3 +39,9 @@ class CourseModel(BaseModel):
   tuition_fee: Optional[str] = None
   link: Optional[str] = None
 ```
+
+## Excpected design
+![image](https://github.com/user-attachments/assets/5f58ad72-248d-4489-9ad3-456678fbc6af)
+![image](https://github.com/user-attachments/assets/20b07d12-76ce-46df-af02-d13f763915fd)
+
+
