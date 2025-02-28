@@ -9,7 +9,7 @@ Here is the intuition
 ```
 
 ## Here are the schemas for the database
-### It is just a pseudocode which happens to be python
+#### It is just a pseudocode which happens to be in python xD
 
 ```python
 class UniversityModel(BaseModel):
@@ -41,6 +41,7 @@ class CourseModel(BaseModel):
 ```
 
 ## Excpected design
+#### The data here is just for demonstration purpose
 ![image](https://github.com/user-attachments/assets/5f58ad72-248d-4489-9ad3-456678fbc6af)
 ![image](https://github.com/user-attachments/assets/20b07d12-76ce-46df-af02-d13f763915fd)
 
