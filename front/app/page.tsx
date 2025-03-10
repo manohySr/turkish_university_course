@@ -1,4 +1,5 @@
-import { SearchCourseLayout } from "@/components/layout/SearchLayout";
+import { ResultLayout } from "@/components/layout/result-layout";
+import { SearchCourseLayout } from "@/components/layout/search-layout";
 import Image from "next/image";
 
 export default function Home() {
@@ -47,6 +48,7 @@ export default function Home() {
       </header>
       <main>
         <SearchCourseLayout />
+        <ResultLayout />
       </main>
       <footer className="bg-white border-t mt-16 py-8">
         <div className="container mx-auto px-4 text-center text-muted-foreground">
