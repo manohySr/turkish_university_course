@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class ApplicationMain {
   public static void main(String[] args) {
+    System.setProperty("spring.devtools.restart.enabled", "true");
     SpringApplication.run(ApplicationMain.class, args);
   }
 }
