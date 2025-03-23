@@ -17,40 +17,36 @@ import {
 } from "@/components/ui/dialog";
 import OutCome from "./outcome-course";
 
-type CourseCardProps = {
-  title: string;
-  university: string;
-  description: string;
-  buttonText: string;
-};
+// TODO: create type for course
+// type CourseCardProps = {
+//   title: string;
+//   university: string;
+//   description: string;
+//   buttonText: string;
+// };
 
-const MachineLearningCard: React.FC<CourseCardProps> = ({
-  title,
-  university,
-  description,
-  buttonText,
-}: CourseCardProps) => {
+const CourseCard: React.FC<any> = ({ course }) => {
   return (
     <>
       <Card>
         <CardHeader>
-          <CardTitle>{title}</CardTitle>
-          <CardDescription>{university}</CardDescription>
+          <CardTitle>{course.name}</CardTitle>
+          <CardDescription>{course.university}</CardDescription>
         </CardHeader>
         <CardContent>
-          <p>{description}</p>
+          <p>{course.description}</p>
         </CardContent>
         <CardFooter>
           <Dialog>
             <DialogTrigger asChild>
-              <Button className="w-full">{buttonText}</Button>
+              <Button className="w-full">Course Outcome</Button>
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
-                <DialogTitle>{title}</DialogTitle>
-                <DialogDescription>{university}</DialogDescription>
+                <DialogTitle>{course.title}</DialogTitle>
+                <DialogDescription>{course.university}</DialogDescription>
               </DialogHeader>
-              <OutCome />
+              <OutCome course={course} />
             </DialogContent>
           </Dialog>
         </CardFooter>
@@ -59,4 +55,4 @@ const MachineLearningCard: React.FC<CourseCardProps> = ({
   );
 };
 
-export default MachineLearningCard;
+export default CourseCard;

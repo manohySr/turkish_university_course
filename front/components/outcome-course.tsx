@@ -1,6 +1,9 @@
 import { Briefcase, ChevronRight, LightbulbIcon, Users } from "lucide-react";
 
-const OutCome = () => {
+// TODO: Use course type
+
+const OutCome = ({ course }) => {
+  const { outcome, jobOpportunities } = course;
   return (
     <div className="bg-primary/5 rounded-lg p-4">
       <h3 className="text-md font-medium mb-3 flex items-center">
@@ -9,32 +12,16 @@ const OutCome = () => {
       </h3>
 
       <div className="space-y-1 mt-2">
-        <div className="flex items-start gap-2">
-          <ChevronRight className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-          <p className="text-sm">
-            Design and implement relational database schemas
-          </p>
-        </div>
-        <div className="flex items-start gap-2">
-          <ChevronRight className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-          <p className="text-sm">
-            Write complex SQL queries for data retrieval and manipulation
-          </p>
-        </div>
-        <div className="flex items-start gap-2">
-          <ChevronRight className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-          <p className="text-sm">
-            Understand database normalization principles Implement transaction
-            processing with ACID properties
-          </p>
-        </div>
-        <div className="flex items-start gap-2">
-          <ChevronRight className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-          <p className="text-sm">
-            Optimize database performance through indexing and query
-            optimization
-          </p>
-        </div>
+        {outcome.length > 0 ? (
+          outcome.map((item, index) => (
+            <div key={index} className="flex items-start gap-2">
+              <ChevronRight className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+              <p className="text-sm">{item}</p>
+            </div>
+          ))
+        ) : (
+          <p className="text-sm text-gray-500">No outcomes available</p>
+        )}
       </div>
 
       <div className="bg-white mt-5 p-4">
@@ -55,23 +42,17 @@ const OutCome = () => {
               Potential Job Roles
             </h4>
             <ul className="space-y-1">
-              <li className="text-sm flex items-start">
-                <ChevronRight className="h-4 w-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                <span>Data Engineer</span>
-              </li>{" "}
-              <li className="text-sm flex items-start">
-                <ChevronRight className="h-4 w-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                <span>Data Engineer</span>
-              </li>
-              <li className="text-sm flex items-start">
-                <ChevronRight className="h-4 w-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                <span>Data Engineer</span>
-              </li>{" "}
-              <li className="text-sm flex items-start">
-                <ChevronRight className="h-4 w-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                <span>Data Engineer</span>
-              </li>
-            </ul>
+              {jobOpportunities.length > 0 ? (
+                jobOpportunities.map((role, index) => (
+                  <li key={index} className="text-sm flex items-start">
+                    <ChevronRight className="h-4 w-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                    <span>{role}</span>
+                  </li>
+                ))
+              ) : (
+                <li className="text-sm text-gray-500">No roles available</li>
+              )}
+            </ul>{" "}
           </div>
         </div>
       </div>

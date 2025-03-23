@@ -17,7 +17,9 @@ const popularSearch = [
   "International Relations",
 ];
 
-export function SearchCourseLayout() {
+// TODO: query type and onSearchChange function type
+
+export function SearchCourseLayout({ query, onSearchChange }) {
   return (
     <div className="p-6">
       <Card className="bg-white rounded-md shadow-sm p-6">
@@ -30,6 +32,7 @@ export function SearchCourseLayout() {
                 type="text"
                 placeholder="Enter your course name, e.g:computer programming..."
                 className="pl-10"
+                onChange={onSearchChange}
               />
             </div>
             <Button type="submit">

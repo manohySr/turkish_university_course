@@ -1,8 +1,17 @@
+"use client";
+
+import { useState } from "react";
 import { ResultLayout } from "@/components/layout/result-layout";
 import { SearchCourseLayout } from "@/components/layout/search-layout";
-import Image from "next/image";
 
+// TODO: create state management system so we can optimize
 export default function Home() {
+  const [query, setQuery] = useState<string>("");
+
+  const handleSearchInput = (e) => {
+    setQuery(e.target.value);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white border-b sticky top-0 z-10">
@@ -47,8 +56,8 @@ export default function Home() {
         </div>
       </header>
       <main>
-        <SearchCourseLayout />
-        <ResultLayout />
+        <SearchCourseLayout query={query} onSearchChange={handleSearchInput} />
+        <ResultLayout query={query} />
       </main>
       <footer className="bg-white border-t mt-16 py-8">
         <div className="container mx-auto px-4 text-center text-muted-foreground">
