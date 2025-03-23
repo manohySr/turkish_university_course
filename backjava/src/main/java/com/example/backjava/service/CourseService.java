@@ -28,7 +28,6 @@ public class CourseService {
                 System.out.println("No courses found in the JSON file.");
                 throw new IllegalStateException("No courses found in the JSON file.");
             }
-            System.out.println(courses);
 
             return courses;
 
