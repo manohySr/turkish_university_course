@@ -2,7 +2,7 @@ import { Briefcase, ChevronRight, LightbulbIcon, Users } from "lucide-react";
 
 // TODO: Use course type
 
-const OutCome = ({ course }) => {
+const OutCome = ({ course }: { course: any }) => {
   const { outcome, jobOpportunities } = course;
   return (
     <div className="bg-primary/5 rounded-lg p-4">
@@ -13,7 +13,7 @@ const OutCome = ({ course }) => {
 
       <div className="space-y-1 mt-2">
         {outcome.length > 0 ? (
-          outcome.map((item, index) => (
+          outcome.map((item: any, index: any) => (
             <div key={index} className="flex items-start gap-2">
               <ChevronRight className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
               <p className="text-sm">{item}</p>
@@ -43,7 +43,7 @@ const OutCome = ({ course }) => {
             </h4>
             <ul className="space-y-1">
               {jobOpportunities.length > 0 ? (
-                jobOpportunities.map((role, index) => (
+                jobOpportunities.map((role: any, index: any) => (
                   <li key={index} className="text-sm flex items-start">
                     <ChevronRight className="h-4 w-4 text-blue-500 flex-shrink-0 mt-0.5" />
                     <span>{role}</span>
@@ -52,7 +52,7 @@ const OutCome = ({ course }) => {
               ) : (
                 <li className="text-sm text-gray-500">No roles available</li>
               )}
-            </ul>{" "}
+            </ul>
           </div>
         </div>
       </div>
