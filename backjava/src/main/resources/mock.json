@@ -21,7 +21,7 @@
   {
     "id": 2,
     "name": "Data Science and Machine Learning",
-    "department": "Artificial Intelligence",
+    "department": "Computer Science",
     "university": "Middle East Technical University",
     "description": "A comprehensive course covering data science fundamentals and machine learning techniques.",
     "outcome": [
@@ -40,7 +40,7 @@
   {
     "id": 3,
     "name": "Cybersecurity and Ethical Hacking",
-    "department": "Information Security",
+    "department": "Computer Science",
     "university": "Bilkent University",
     "description": "A practical course on network security, cryptography, and ethical hacking techniques.",
     "outcome": [
